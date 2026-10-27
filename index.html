@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neural Breach | Pre-launch security reviews for AI-built apps</title>
+<meta name="description" content="Fixed-price security reviews for apps built with Cursor, Lovable, Bolt, v0 and Claude Code. We find the breach first, so your users never do.">
+<!-- Confirm hello@neural-breach.com mailbox exists. -->
+<style>
+:root{--bg:#0b0f14;--panel:#121821;--line:#223041;--text:#e8edf3;--muted:#9aa8b8;--accent:#3ddc97;--warn:#f5b84b}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent)}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
+.logo{font-weight:700;letter-spacing:.5px}.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:15px}
+.hero{padding:64px 0 40px}.eyebrow{color:var(--accent);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1px}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:12px 0 16px}h2{font-size:30px;margin:0 0 8px}h3{margin:0 0 6px}
+.lead{font-size:19px;color:var(--muted);max-width:720px}
+.btn{display:inline-block;background:var(--accent);color:#04120b;font-weight:700;padding:14px 22px;border-radius:10px;text-decoration:none;margin:20px 12px 0 0}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+section{padding:56px 0;border-top:1px solid var(--line)}.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.price{font-size:34px;font-weight:800;margin:6px 0}.tag{color:var(--muted);font-size:14px}
+.card ul{padding-left:18px;margin:12px 0 0}.card li{margin:6px 0}.featured{border-color:var(--accent)}
+.sev{font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;margin-right:8px}
+.crit{background:#4a1515;color:#ff8a8a}.high{background:#4a3315;color:var(--warn)}.med{background:#1c3245;color:#8cc8ff}
+.steps{counter-reset:s;list-style:none;padding:0}.steps li{counter-increment:s;padding:0 0 18px 48px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--panel);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:10px 0}summary{cursor:pointer;font-weight:600}
+.note{font-size:13px;color:var(--muted)}footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.cta{text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">neural<span>·</span>breach</div>
+  <nav><a href="#pricing">Pricing</a><a href="#findings">What we find</a><a href="#process">Process</a><a href="#faq">FAQ</a></nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Pre-launch security reviews for AI-built apps</div>
+  <h1>We find the breach first,<br>so your users never do.</h1>
+  <p class="lead">You shipped fast with Cursor, Lovable, Bolt, v0 or Claude Code. We read the code the AI wrote, find the holes attackers look for first, and hand you a ranked fix list in days. Fixed price, defensive only, no sales calls.</p>
+  <a class="btn" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review</a><a class="btn ghost" href="#findings">See what we find</a>
+</div>
+
+<section id="for">
+  <h2>Who it's for</h2>
+  <p class="sub">Founders and small teams about to put real users, payments or personal data behind an AI-built app.</p>
+  <div class="grid">
+    <div class="card"><h3>Launching soon</h3><p>Your MVP works. You want to know it won't leak every user's data on day one.</p></div>
+    <div class="card"><h3>Taking payments or PII</h3><p>Stripe, auth, health or customer data now live in code nobody has reviewed line by line.</p></div>
+    <div class="card"><h3>Raising or selling</h3><p>An investor, customer or acquirer will ask about security. Have a clean, written answer.</p></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Three fixed prices</h2>
+  <p class="sub">Pay online, share read access to your repo, get your report. Scope is one app repository.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="tag">Express</div><div class="price">$499</div><div class="tag">Report in 1–2 business days</div>
+      <ul><li>Full OWASP Top 10 pass on your app code</li><li>Auth, sessions and access control on every route</li><li>Secrets scan, including git history</li><li>Database rules (Supabase RLS, Firebase rules)</li><li>Dependency vulnerabilities</li><li>Findings ranked by severity, each with the exact fix</li></ul>
+    </div>
+    <div class="card featured">
+      <div class="tag">Full · most popular</div><div class="price">$1,250</div><div class="tag">Report in 4–5 business days</div>
+      <ul><li>Everything in Express</li><li>Deep review of auth, payments and webhooks</li><li>AI features: prompt injection, tool and data exposure</li><li>Cloud config, CORS, headers, storage buckets</li><li>30-minute walkthrough call</li><li>One free re-check after you fix</li><li>Investor-friendly summary page</li></ul>
+    </div>
+    <div class="card">
+      <div class="tag">Hardening</div><div class="price">$2,500</div><div class="tag">Done in 8–10 business days</div>
+      <ul><li>Everything in Full</li><li>We implement the fixes as pull requests</li><li>Verification re-test of every finding</li><li>Copy-paste prompts to keep your AI coder on secure patterns</li><li>30 days of follow-up questions</li></ul>
+    </div>
+  </div>
+  <p class="note">Not a penetration test or a compliance certificate (SOC 2, ISO 27001). Prices in USD, excluding any applicable VAT.</p>
+</section>
+
+<section id="findings">
+  <h2>What we usually find</h2>
+  <p class="sub">Illustrative examples of issue types common in AI-generated code, not client data.</p>
+  <div class="grid">
+    <div class="card"><span class="sev crit">CRITICAL</span><h3>Row-level security off</h3><p>Any signed-in user can read or edit every other user's rows by calling the database API directly.</p></div>
+    <div class="card"><span class="sev crit">CRITICAL</span><h3>Admin key in the browser</h3><p>A service-role or secret API key shipped in the front-end bundle, giving full database or billing access.</p></div>
+    <div class="card"><span class="sev high">HIGH</span><h3>Missing ownership checks</h3><p><code>/api/invoices/123</code> returns anyone's invoice: the route checks login, not ownership.</p></div>
+    <div class="card"><span class="sev high">HIGH</span><h3>Unsigned payment webhooks</h3><p>The Stripe webhook trusts any request, so a forged call can unlock a paid plan.</p></div>
+    <div class="card"><span class="sev high">HIGH</span><h3>Prompt injection in AI features</h3><p>User text can make your AI feature reveal its system prompt, other users' data, or call tools it shouldn't.</p></div>
+    <div class="card"><span class="sev med">MEDIUM</span><h3>Public storage buckets</h3><p>Uploaded files, including IDs and invoices, are reachable by guessable URL.</p></div>
+  </div>
+</section>
+
+<section id="process">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><strong>Pick a tier and pay.</strong> No calls or quotes needed. Questions first? Email us.</li>
+    <li><strong>Share read-only access.</strong> A read-only GitHub invite or a ZIP, plus the app URL and database schema. We sign your NDA if you have one.</li>
+    <li><strong>We review.</strong> Automated scanners plus line-by-line human review by a senior security engineer. We never attack your live app or touch production data.</li>
+    <li><strong>Get your report.</strong> Findings ranked by severity, with impact, evidence and the exact fix for each.</li>
+    <li><strong>Fix and confirm.</strong> Fix it yourself with our prompts, or let us open pull requests (Hardening). We re-check and remove our access and copy of your code.</li>
+  </ol>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <details><summary>Why is a security review called Neural Breach?</summary><p>Because finding the breach is the job. We think like an attacker on paper, inside your code, so nobody gets to do it for real. We are strictly defensive: we only review apps whose owners hire us.</p></details>
+  <details><summary>Is this a penetration test?</summary><p>No. It is a code and configuration review from the inside. We do not attack your running app. If you need a formal pentest for a customer or auditor, we'll tell you.</p></details>
+  <details><summary>Does it work if my app wasn't built with AI?</summary><p>Yes. The method is the same; AI-built apps are simply the ones that ship with the least review.</p></details>
+  <details><summary>What stacks do you cover?</summary><p>Next.js, React, Node, Python, Supabase, Firebase, Postgres, Stripe, Vercel, and AI SDKs (OpenAI, Anthropic and others). Ask if yours isn't listed.</p></details>
+  <details><summary>How do you handle my code?</summary><p>Read-only access, reviewed on isolated machines, never used to train AI models, and deleted when the engagement ends. NDA available.</p></details>
+  <details><summary>Do you use AI in the review?</summary><p>Yes, as a first pass alongside standard scanners. A senior human engineer verifies every finding before it reaches your report, so you get no false-alarm dumps.</p></details>
+  <details><summary>What if you find nothing serious?</summary><p>Then you get a written report saying so, with what we checked. That's useful for investors and customers too.</p></details>
+  <details><summary>Refunds?</summary><p>If we can't start within the promised window, you get a full refund.</p></details>
+</section>
+
+<section class="cta">
+  <h2>Ship it. Then sleep.</h2>
+  <p class="sub">Book a fixed-price review and know your app's weak spots before launch day.</p>
+  <a class="btn" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review from $499</a><a class="btn ghost" href="mailto:hello@neural-breach.com">hello@neural-breach.com</a>
+</section>
+
+<footer>© 2026 Neural Breach · Defensive security reviews for AI-built apps · neural-breach.com</footer>
+</div>
+</body>
+</html>

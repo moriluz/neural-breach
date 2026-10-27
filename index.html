@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Neural Breach | Pre-launch security reviews for AI-built apps</title>
-<meta name="description" content="Fixed-price security reviews for apps built with Cursor, Lovable, Bolt, v0 and Claude Code. We find the breach first, so your users never do.">
+<title>Neural Breach | Security reviews for vibe-coded apps</title>
+<meta name="description" content="You vibe-coded an app. Have a professional review it before your users do. Fixed-price security reviews for Cursor, Lovable, Bolt, v0 and Claude Code.">
 <!-- Confirm hello@neural-breach.com mailbox exists. -->
 <style>
 :root{--bg:#0b0f14;--panel:#121821;--line:#223041;--text:#e8edf3;--muted:#9aa8b8;--accent:#3ddc97;--warn:#f5b84b}
@@ -41,31 +41,35 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
 </header>
 
 <div class="hero">
-  <div class="eyebrow">Pre-launch security reviews for AI-built apps</div>
-  <h1>We find the breach first,<br>so your users never do.</h1>
-  <p class="lead">You shipped fast with Cursor, Lovable, Bolt, v0 or Claude Code. We read the code the AI wrote, find the holes attackers look for first, and hand you a ranked fix list in days. Fixed price, defensive only, no sales calls.</p>
+  <div class="eyebrow">Security reviews for vibe-coded apps</div>
+  <h1>You vibe-coded an app.<br>Have a professional look at it.</h1>
+  <p class="lead">Cursor, Lovable, Bolt, v0, Claude Code — shipping in a weekend is the point. The holes that come with it aren't. We read the code the AI wrote, find what attackers look for first, and hand you a ranked fix list. Fixed price, from $199. Defensive only.</p>
   <a class="btn" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review</a><a class="btn ghost" href="https://cal.com/neuralbreach/intro" target="_blank" rel="noopener">Book a 20-min intro call</a><a class="btn ghost" href="#findings">See what we find</a>
 </div>
 
 <section id="for">
   <h2>Who it's for</h2>
-  <p class="sub">Founders and small teams about to put real users, payments or personal data behind an AI-built app.</p>
+  <p class="sub">Indie builders and small teams who vibe-coded something real and are about to put users, payments or personal data behind it.</p>
   <div class="grid">
-    <div class="card"><h3>Launching soon</h3><p>Your MVP works. You want to know it won't leak every user's data on day one.</p></div>
+    <div class="card"><h3>You vibe-coded it</h3><p>The app works. You shipped fast. You have not read every line the model wrote, and you know attackers will.</p></div>
     <div class="card"><h3>Taking payments or PII</h3><p>Stripe, auth, health or customer data now live in code nobody has reviewed line by line.</p></div>
     <div class="card"><h3>Raising or selling</h3><p>An investor, customer or acquirer will ask about security. Have a clean, written answer.</p></div>
   </div>
 </section>
 
 <section id="pricing">
-  <h2>Three fixed prices</h2>
-  <p class="sub">Pay online, share read access to your repo, get your report. Scope is one app repository.</p>
+  <h2>Four fixed prices</h2>
+  <p class="sub">Pay online, share read access to your repo, get your report. Scope is one app repository. Start at $199 if the app is still small.</p>
   <div class="grid">
+    <div class="card featured">
+      <div class="tag">Vibe · for small apps</div><div class="price">$199</div><div class="tag">Report in 1 business day</div>
+      <ul><li>One small vibe-coded app, one repo</li><li>Secrets scan, including git history</li><li>Database rules (Supabase RLS, Firebase rules)</li><li>Auth basics and common access-control misses</li><li>Findings ranked by severity, each with the exact fix</li><li>Best when you have no payments and no multi-tenant roles yet</li></ul>
+    </div>
     <div class="card">
       <div class="tag">Express</div><div class="price">$499</div><div class="tag">Report in 1–2 business days</div>
       <ul><li>Full OWASP Top 10 pass on your app code</li><li>Auth, sessions and access control on every route</li><li>Secrets scan, including git history</li><li>Database rules (Supabase RLS, Firebase rules)</li><li>Dependency vulnerabilities</li><li>Findings ranked by severity, each with the exact fix</li></ul>
     </div>
-    <div class="card featured">
+    <div class="card">
       <div class="tag">Full · most popular</div><div class="price">$1,250</div><div class="tag">Report in 4–5 business days</div>
       <ul><li>Everything in Express</li><li>Deep review of auth, payments and webhooks</li><li>AI features: prompt injection, tool and data exposure</li><li>Cloud config, CORS, headers, storage buckets</li><li>30-minute walkthrough call</li><li>One free re-check after you fix</li><li>Investor-friendly summary page</li></ul>
     </div>
@@ -74,12 +78,12 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
       <ul><li>Everything in Full</li><li>We implement the fixes as pull requests</li><li>Verification re-test of every finding</li><li>Copy-paste prompts to keep your AI coder on secure patterns</li><li>30 days of follow-up questions</li></ul>
     </div>
   </div>
-  <p class="note">Not a penetration test or a compliance certificate (SOC 2, ISO 27001). Prices in USD, excluding any applicable VAT.</p>
+  <p class="note">Not a penetration test or a compliance certificate (SOC 2, ISO 27001). Prices in USD, excluding any applicable VAT. If you're not sure which tier fits, email us a one-line description of the app and we'll tell you.</p>
 </section>
 
 <section id="findings">
   <h2>What we usually find</h2>
-  <p class="sub">Illustrative examples of issue types common in AI-generated code, not client data.</p>
+  <p class="sub">Illustrative examples of issue types common in vibe-coded apps, not client data.</p>
   <div class="grid">
     <div class="card"><span class="sev crit">CRITICAL</span><h3>Row-level security off</h3><p>Any signed-in user can read or edit every other user's rows by calling the database API directly.</p></div>
     <div class="card"><span class="sev crit">CRITICAL</span><h3>Admin key in the browser</h3><p>A service-role or secret API key shipped in the front-end bundle, giving full database or billing access.</p></div>
@@ -105,7 +109,8 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
   <h2>FAQ</h2>
   <details><summary>Why is a security review called Neural Breach?</summary><p>Because finding the breach is the job. We think like an attacker on paper, inside your code, so nobody gets to do it for real. We are strictly defensive: we only review apps whose owners hire us.</p></details>
   <details><summary>Is this a penetration test?</summary><p>No. It is a code and configuration review from the inside. We do not attack your running app. If you need a formal pentest for a customer or auditor, we'll tell you.</p></details>
-  <details><summary>Does it work if my app wasn't built with AI?</summary><p>Yes. The method is the same; AI-built apps are simply the ones that ship with the least review.</p></details>
+  <details><summary>What counts as a "small app" for the $199 Vibe tier?</summary><p>One repo, one small product, no payments and no multi-tenant roles yet. Think a weekend build about to get its first users. If you have Stripe, teams, or admin roles, start at Express.</p></details>
+  <details><summary>Does it work if my app wasn't vibe-coded?</summary><p>Yes. The method is the same; vibe-coded apps are simply the ones that ship with the least review.</p></details>
   <details><summary>What stacks do you cover?</summary><p>Next.js, React, Node, Python, Supabase, Firebase, Postgres, Stripe, Vercel, and AI SDKs (OpenAI, Anthropic and others). Ask if yours isn't listed.</p></details>
   <details><summary>How do you handle my code?</summary><p>Read-only access, reviewed on isolated machines, never used to train AI models, and deleted when the engagement ends. NDA available.</p></details>
   <details><summary>Do you use AI in the review?</summary><p>Yes, as a first pass alongside standard scanners. A senior human engineer verifies every finding before it reaches your report, so you get no false-alarm dumps.</p></details>
@@ -114,12 +119,12 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
 </section>
 
 <section class="cta">
-  <h2>Ship it. Then sleep.</h2>
+  <h2>Vibe code it. Then have us check it.</h2>
   <p class="sub">Book a fixed-price review and know your app's weak spots before launch day.</p>
-  <a class="btn" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review from $499</a><a class="btn ghost" href="https://cal.com/neuralbreach/intro" target="_blank" rel="noopener">Book a 20-min intro call</a><a class="btn ghost" href="mailto:hello@neural-breach.com">hello@neural-breach.com</a>
+  <a class="btn" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review from $199</a><a class="btn ghost" href="https://cal.com/neuralbreach/intro" target="_blank" rel="noopener">Book a 20-min intro call</a><a class="btn ghost" href="mailto:hello@neural-breach.com">hello@neural-breach.com</a>
 </section>
 
-<footer>© 2026 Neural Breach · Defensive security reviews for AI-built apps · <a href="mailto:hello@neural-breach.com">hello@neural-breach.com</a> · <a href="https://x.com/neural_breach" target="_blank" rel="noopener">@neural_breach on X</a></footer>
+<footer>© 2026 Neural Breach · Defensive security reviews for vibe-coded apps · <a href="mailto:hello@neural-breach.com">hello@neural-breach.com</a> · <a href="https://x.com/neural_breach" target="_blank" rel="noopener">@neural_breach on X</a></footer>
 </div>
 </body>
 </html>

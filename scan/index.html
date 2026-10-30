@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Scan: after you buy | Neural Breach</title>
+<meta name="description" content="What to send after buying the $19 nb-probe Quick Scan, how the ownership check works, and what the report contains.">
+<style>
+:root{--bg:#0b0f14;--panel:#121821;--line:#223041;--text:#e8edf3;--muted:#9aa8b8;--accent:#3ddc97;--warn:#f5b84b}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent)}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
+.logo{font-weight:700;letter-spacing:.5px}.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:15px}
+.hero{padding:64px 0 40px}.eyebrow{color:var(--accent);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1px}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:12px 0 16px}h2{font-size:30px;margin:0 0 8px}h3{margin:0 0 6px}
+.lead{font-size:19px;color:var(--muted);max-width:720px}
+.btn{display:inline-block;background:var(--accent);color:#04120b;font-weight:700;padding:14px 22px;border-radius:10px;text-decoration:none;margin:20px 12px 0 0}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+section{padding:56px 0;border-top:1px solid var(--line)}.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.price{font-size:34px;font-weight:800;margin:6px 0}.tag{color:var(--muted);font-size:14px}
+.card ul{padding-left:18px;margin:12px 0 0}.card li{margin:6px 0}.featured{border-color:var(--accent)}
+.sev{font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;margin-right:8px}
+.crit{background:#4a1515;color:#ff8a8a}.high{background:#4a3315;color:var(--warn)}.med{background:#1c3245;color:#8cc8ff}
+.steps{counter-reset:s;list-style:none;padding:0}.steps li{counter-increment:s;padding:0 0 18px 48px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--panel);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:10px 0}summary{cursor:pointer;font-weight:600}
+.note{font-size:13px;color:var(--muted)}footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.cta{text-align:center}
+.beta{font-size:18px;font-weight:700;color:var(--accent)}
+.entry{margin:0 0 18px}.entry .cols{display:grid;gap:8px 28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.entry h4{margin:14px 0 0;font-size:15px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}.entry .btn{margin-top:18px}.alt{font-size:14px;color:var(--muted);margin:10px 0 0}
+.cmd{display:block;overflow-x:auto;white-space:pre-wrap;word-break:break-word;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:24px 0 0;font-size:15px}
+</style>
+<script data-goatcounter="https://neuralbreach.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo"><a href="/" style="color:inherit;text-decoration:none">neural<span>·</span>breach</a></div>
+  <nav><a href="/#pricing">Pricing</a><a href="/#nb-probe">nb-probe</a><a href="/#faq">FAQ</a></nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">nb-probe Quick Scan · $19</div>
+  <h1>After you buy</h1>
+  <p class="lead">One email from you, one file on your app, and the report reaches you within 24 hours of the ownership check passing. Here's exactly what we need and what we do with it.</p>
+  <a class="btn" href="https://morie2.gumroad.com/l/tkobl">Buy the Quick Scan · $19</a><a class="btn ghost" href="mailto:hello@neural-breach.com?subject=Quick%20Scan%20question">Ask a question first</a>
+  <p class="alt">Checkout is on Gumroad. If the button doesn't open, <a href="https://morie2.gumroad.com/l/tkobl" target="_blank" rel="noopener">buy it on gumroad.com</a>.</p>
+</div>
+
+<section id="steps">
+  <h2>Four steps</h2>
+  <ol class="steps">
+    <li><strong>Email us the details.</strong> Reply to your Gumroad receipt, or write to <a href="mailto:hello@neural-breach.com?subject=Quick%20Scan%20intake">hello@neural-breach.com</a> from the address you bought with. The list of what to include is below.</li>
+    <li><strong>We send you an ownership token.</strong> Usually within a few hours of your email.</li>
+    <li><strong>You serve the token on your app.</strong> At <code>https://your-app/.well-known/neural-breach</code>, then reply "live". The scan will not start until that URL returns the token.</li>
+    <li><strong>We run the scan and email the report.</strong> Within 24 hours of the token going live.</li>
+  </ol>
+</section>
+
+<section id="send">
+  <h2>What to put in the email</h2>
+  <p class="sub">Copy this, fill it in, send it.</p>
+  <pre class="cmd"><code>Gumroad order email:
+App URL (staging if you have one):
+Supabase project URL (https://xxxx.supabase.co):
+Supabase anon key (the public one, already in your JS bundle):
+
+Test accounts, pick one:
+  a) Public signup is open and email confirmation is off. Create two users yourselves.
+  b) Two throwaway accounts:
+     A: email / password
+     B: email / password
+
+Should public signup be closed? (yes / no):
+Tables to limit the scan to (optional):
+Webhook or chat routes if not the defaults (optional):</code></pre>
+  <div class="grid" style="margin-top:24px">
+    <div class="card"><h3>Test accounts</h3><p>Use two fresh accounts with no real data, ideally on staging. We sign in as each one, insert one probe row per account, and try to reach the other's row. Delete or reset the accounts after you get the report.</p></div>
+    <div class="card"><h3>Don't send</h3><p>Your Supabase service-role key, secret keys, passwords for real users, or repo access. The Quick Scan needs none of them. If you need a review that reads code, that's the <a href="/#pricing">Vibe tier</a>.</p></div>
+    <div class="card"><h3>Not on Supabase?</h3><p>The cross-user checks need Supabase today. Without it, only the bundle, webhook and LLM-route checks run. Email us before buying, or ask for a refund if you already did.</p></div>
+  </div>
+</section>
+
+<section id="ownership">
+  <h2>The ownership check</h2>
+  <p class="sub">nb-probe refuses to scan a host that hasn't opted in. This is how you opt in.</p>
+  <div class="card">
+    <ul>
+      <li>Serve the token at <code>/.well-known/neural-breach</code> on your app's origin, the same URL you sent us. Not on the Supabase project URL.</li>
+      <li>It must return HTTP 200 from that exact path, with no redirect and no login in front of it.</li>
+      <li>The body is the token as plain text, with an optional trailing newline. JSON <code>{"token":"..."}</code> also works.</li>
+      <li>On Next.js or Vite, save it as <code>public/.well-known/neural-breach</code> with no file extension, then deploy.</li>
+      <li>Anyone who requests that URL can read the token. It's an opt-in, not a password. Remove it after the scan.</li>
+    </ul>
+  </div>
+  <pre class="cmd"><code>curl -i https://your-app/.well-known/neural-breach
+# expect: HTTP/2 200 and the token on its own line</code></pre>
+</section>
+
+<section id="report">
+  <h2>What the scan does, and what you get back</h2>
+  <div class="grid">
+    <div class="card"><h3>What runs</h3><p>Eight checks: logged-out read, cross-user read, cross-user write, self-promotion of role, is_admin, plan or credits, closed-signup bypass (if you said signup should be closed), secrets and source maps in same-origin scripts, unsigned webhook, and an LLM route that answers with no session.</p></div>
+    <div class="card"><h3>What it touches</h3><p>It inserts one row per test user, may patch a field on a row it created, posts one unsigned test event <code>evt_nb_probe_canary</code> to your webhook route, and sends one "nb-probe ping" to your chat route. Probe rows are deleted before it exits. That's why staging is better.</p></div>
+    <div class="card"><h3>The report</h3><p>Each failed check with its severity, what it means, a curl command that reproduces it, and the fix. Then the checks that passed or were skipped, and why. Plain text by email.</p></div>
+  </div>
+  <p class="note">This is an automated scan of cross-user data access and a few related misconfigurations, not a code review or a penetration test. A pass means the probe did not observe the failure, not that the app is safe. For a senior engineer reading your code, see <a href="/#pricing">Vibe ($199)</a> and up. The scanner is open source: <a href="https://github.com/moriluz/nb-probe" target="_blank" rel="noopener">nb-probe on GitHub</a>.</p>
+</section>
+
+<section id="refunds">
+  <h2>Refunds</h2>
+  <p class="sub">If the scan can't run against your app, for example the token can't be served or the app isn't one we can scan, or we miss the 24 hours, email us and you get your $19 back.</p>
+</section>
+
+<footer>© 2026 Neural Breach · Defensive security reviews for vibe-coded apps · <a href="mailto:hello@neural-breach.com">hello@neural-breach.com</a> · <a href="https://x.com/neural_breach" target="_blank" rel="noopener">@neural_breach on X</a> · <a href="https://github.com/moriluz/nb-probe" target="_blank" rel="noopener">nb-probe on GitHub</a></footer>
+</div>
+<script src="https://gumroad.com/js/gumroad.js"></script>
+</body>
+</html>

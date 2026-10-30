@@ -31,6 +31,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
 .note{font-size:13px;color:var(--muted)}footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 .cta{text-align:center}
 .beta{font-size:18px;font-weight:700;color:var(--accent)}
+.entry{margin:0 0 18px}.entry .cols{display:grid;gap:8px 28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.entry h4{margin:14px 0 0;font-size:15px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}.entry .btn{margin-top:18px}.tiers{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.alt{font-size:14px;color:var(--muted);margin:10px 0 0}
 .cmd{display:block;overflow-x:auto;white-space:pre-wrap;word-break:break-word;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:24px 0 0;font-size:15px}
 </style>
 <script data-goatcounter="https://neuralbreach.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -39,13 +40,13 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
 <div class="wrap">
 <header>
   <div class="logo">neural<span>·</span>breach</div>
-  <nav><a href="#pricing">Pricing</a><a href="#nb-probe">nb-probe</a><a href="#findings">What we find</a><a href="#process">Process</a><a href="#faq">FAQ</a></nav>
+  <nav><a href="#pricing">Pricing</a><a href="#quick-scan">Quick Scan</a><a href="#nb-probe">nb-probe</a><a href="#findings">What we find</a><a href="#process">Process</a><a href="#faq">FAQ</a></nav>
 </header>
 
 <div class="hero">
   <div class="eyebrow">Security reviews for vibe-coded apps</div>
   <h1>You vibe-coded an app.<br>Have a professional look at it.</h1>
-  <p class="lead">Cursor, Lovable, Bolt, v0, Claude Code: shipping in a weekend is the point. The holes that come with it aren't. We read the code the AI wrote, find what attackers look for first, and hand you a ranked fix list. Free automated scan, human reviews from $199. Defensive only.</p>
+  <p class="lead">Cursor, Lovable, Bolt, v0, Claude Code: shipping in a weekend is the point. The holes that come with it aren't. We read the code the AI wrote, find what attackers look for first, and hand you a ranked fix list. $19 automated scan, human reviews from $199. Defensive only.</p>
   <a class="btn" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review</a><a class="btn ghost" href="https://cal.com/neuralbreach/intro" target="_blank" rel="noopener">Book a 20-min intro call</a><a class="btn ghost" href="#findings">See what we find</a>
 </div>
 
@@ -61,14 +62,19 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
 
 <section id="pricing">
   <h2>Five fixed prices</h2>
-  <p class="sub">Start with the free automated Quick Scan. For a human review, pay online, share read access to your repo, get your report. Scope is one app repository. Start at $199 if the app is still small.</p>
-  <div class="grid">
-    <div class="card">
-      <div class="tag">Quick Scan · automated</div><div class="price">Free <span class="beta">during beta</span></div><div class="tag">$19 after beta · Report within 24 hours</div>
-      <ul><li>One automated <a href="#nb-probe">nb-probe</a> run against your deployed app, ideally staging. Supabase apps first</li><li>You send your app URL, Supabase URL and anon key, and serve the ownership token we give you</li><li>We create two test users and one row for each, then clean up</li><li>Cross-user read and write, logged-out reads, self-promotion to admin</li><li>Secrets and source maps in your JS bundle, unsigned webhooks, open LLM endpoints, signup that should be closed</li><li>Each failed check with a curl repro and the fix</li><li>No repo access and no human review</li></ul>
-      <a class="btn ghost" href="mailto:hello@neural-breach.com?subject=Quick%20Scan%20request&amp;body=App%20URL%3A%20%0ASupabase%20project%20URL%3A%20%0ASupabase%20anon%20key%20%28the%20public%20one%29%3A%20%0AShould%20public%20signup%20be%20closed%3F%20%28yes%2Fno%29%3A%20%0A%0AWe%27ll%20reply%20with%20your%20ownership%20token.">Request a free Quick Scan</a>
+  <p class="sub">Start with the $19 automated Quick Scan. For a human review, pay online, share read access to your repo, get your report. Scope is one app repository. Start at $199 if the app is still small.</p>
+  <div class="card entry featured" id="quick-scan">
+    <div class="tag">Quick Scan · automated · start here</div><div class="price">$19</div><div class="tag">One app · report by email within 24 hours of the ownership check passing</div>
+    <p>We run <a href="#nb-probe">nb-probe</a> once against your deployed app, ideally staging, with two test users, and check whether one user can read or change the other's data. It's an automated scan of cross-user data access and a few related misconfigurations. It is not a code review. Built for Supabase apps; if yours isn't on Supabase, email us before you buy.</p>
+    <div class="cols">
+      <div><h4>What you get</h4><ul><li>Cross-user read and write: can user A read, edit or delete user B's rows</li><li>Logged-out reads with your public anon key</li><li>Self-promotion: can a user set their own role, is_admin, plan or credits</li><li>Secrets and source maps in your JS bundle, unsigned webhooks, open LLM endpoints, signup that should be closed</li><li>Every failed check with a curl repro and the fix, plus the list of checks that passed or were skipped</li></ul></div>
+      <div><h4>What we need from you</h4><ul><li>Your app URL, Supabase project URL and anon key (the public one)</li><li>Two throwaway test accounts, or confirmation that public signup is open</li><li>A token we send you, served at <code>/.well-known/neural-breach</code> on your app, so we only scan apps you control</li><li>Never your service-role key, passwords for real users, or repo access</li></ul></div>
     </div>
-    <div class="card featured">
+    <a class="btn" href="https://morie2.gumroad.com/l/tkobl">Buy the Quick Scan · $19</a><a class="btn ghost" href="/scan/">What happens after you buy</a>
+    <p class="alt">Checkout is on Gumroad. If the button doesn't open, <a href="https://morie2.gumroad.com/l/tkobl" target="_blank" rel="noopener">buy it on gumroad.com</a>. A pass means the probe did not observe the failure, not that the app is safe. For a human read of your code, see <a href="#vibe">Vibe at $199</a>.</p>
+  </div>
+  <div class="grid tiers">
+    <div class="card featured" id="vibe">
       <div class="tag">Vibe · for small apps</div><div class="price">$199</div><div class="tag">Report in 1 business day</div>
       <ul><li>One small vibe-coded app, one repo</li><li>Secrets scan, including git history</li><li>Database rules (Supabase RLS, Firebase rules)</li><li>Auth basics and common access-control misses</li><li>Findings ranked by severity, each with the exact fix</li><li>Our first human review: a senior engineer reads the code</li><li>Best when you have no payments and no multi-tenant roles yet</li></ul>
     </div>
@@ -90,7 +96,7 @@ details{background:var(--panel);border:1px solid var(--line);border-radius:12px;
 
 <section id="nb-probe">
   <h2>Open source: nb-probe</h2>
-  <p class="sub">The scanner behind the Quick Scan. Free, MIT licensed, and yours to run. Supabase is the first target.</p>
+  <p class="sub">The scanner behind the $19 Quick Scan. MIT licensed and free to run yourself, or pay $19 and we run it and write up the results. Supabase is the first target.</p>
   <div class="grid">
     <div class="card"><h3>What it catches</h3><p>The most common leak in vibe-coded apps is user A reading user B's rows through a perfectly valid API call. Normal scanners can't flag it because they don't know who owns what. nb-probe creates two users in your app, inserts one row for each, and checks whether A can read or change B's row.</p></div>
     <div class="card"><h3>Eight checks</h3><p>Anonymous read, cross-user read and write, self-promotion to admin or a paid plan, closed-signup bypass, secrets and source maps in the JS bundle, unsigned webhooks, and LLM endpoints that accept anyone or any model. Each failure comes with a curl repro and the fix.</p></div>
@@ -132,22 +138,24 @@ npx nb-probe scan --url https://app.example --token "$NB_TOKEN" \
   <details><summary>Why is a security review called Neural Breach?</summary><p>Because finding the breach is the job. We think like an attacker on paper, inside your code, so nobody gets to do it for real. We are strictly defensive: we only review apps whose owners hire us.</p></details>
   <details><summary>Is this a penetration test?</summary><p>No. A review is a code and configuration review from the inside, and we do not attack your running app. The Quick Scan does send requests to your live app, but only after you add the ownership token, and only with two test users it creates for the scan and removes afterward. If you need a formal pentest for a customer or auditor, we'll tell you.</p></details>
   <details><summary>What's the difference between the Quick Scan and a review?</summary><p>The Quick Scan is automated. It runs nb-probe's eight checks against your live app and tells you which failed, with a curl repro and the fix for each. A pass means the probe did not observe the failure, not that the app is safe. A review is a senior engineer reading your code, so it finds what a scanner can't: broken business logic, risky AI features, payment flows, and the context to rank what matters. A failed Quick Scan is a good reason to book one.</p></details>
+  <details><summary>What do I send after buying the Quick Scan?</summary><p>Reply to your Gumroad receipt, or email hello@neural-breach.com from the address you bought with: your app URL, Supabase project URL and anon key, and two throwaway test accounts (or tell us signup is open). We send you a token to serve at <code>/.well-known/neural-breach</code>. Once it's live, the report reaches you within 24 hours. <a href="/scan/">Full details</a>.</p></details>
   <details><summary>What counts as a "small app" for the $199 Vibe tier?</summary><p>One repo, one small product, no payments and no multi-tenant roles yet. Think a weekend build about to get its first users. If you have Stripe, teams, or admin roles, start at Express.</p></details>
   <details><summary>Does it work if my app wasn't vibe-coded?</summary><p>Yes. The method is the same; vibe-coded apps are simply the ones that ship with the least review.</p></details>
   <details><summary>What stacks do you cover?</summary><p>Next.js, React, Node, Python, Supabase, Firebase, Postgres, Stripe, Vercel, and AI SDKs (OpenAI, Anthropic and others). Ask if yours isn't listed.</p></details>
   <details><summary>How do you handle my code?</summary><p>Read-only access, reviewed on isolated machines, never used to train AI models, and deleted when the engagement ends. NDA available.</p></details>
   <details><summary>Do you use AI in the review?</summary><p>Yes, as a first pass alongside standard scanners. A senior human engineer verifies every finding before it reaches your report, so you get no false-alarm dumps.</p></details>
   <details><summary>What if you find nothing serious?</summary><p>Then you get a written report saying so, with what we checked. That's useful for investors and customers too.</p></details>
-  <details><summary>Refunds?</summary><p>If we can't start within the promised window, you get a full refund.</p></details>
+  <details><summary>Refunds?</summary><p>If we can't start within the promised window, you get a full refund. For the Quick Scan, that includes the case where the scan can't run against your app, for example because the ownership token can't be served.</p></details>
 </section>
 
 <section class="cta">
   <h2>Vibe code it. Then have us check it.</h2>
-  <p class="sub">Start with a free automated Quick Scan, or book a fixed-price review and know your app's weak spots before launch day.</p>
-  <a class="btn" href="mailto:hello@neural-breach.com?subject=Quick%20Scan%20request&amp;body=App%20URL%3A%20%0ASupabase%20project%20URL%3A%20%0ASupabase%20anon%20key%20%28the%20public%20one%29%3A%20%0AShould%20public%20signup%20be%20closed%3F%20%28yes%2Fno%29%3A%20%0A%0AWe%27ll%20reply%20with%20your%20ownership%20token.">Request a free Quick Scan</a><a class="btn ghost" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review from $199</a><a class="btn ghost" href="https://cal.com/neuralbreach/intro" target="_blank" rel="noopener">Book a 20-min intro call</a><a class="btn ghost" href="mailto:hello@neural-breach.com">hello@neural-breach.com</a>
+  <p class="sub">Start with the $19 automated Quick Scan, or book a fixed-price review and know your app's weak spots before launch day.</p>
+  <a class="btn" href="https://morie2.gumroad.com/l/tkobl">Buy the Quick Scan · $19</a><a class="btn ghost" href="mailto:hello@neural-breach.com?subject=Security%20review">Book a review from $199</a><a class="btn ghost" href="https://cal.com/neuralbreach/intro" target="_blank" rel="noopener">Book a 20-min intro call</a><a class="btn ghost" href="mailto:hello@neural-breach.com">hello@neural-breach.com</a>
 </section>
 
 <footer>© 2026 Neural Breach · Defensive security reviews for vibe-coded apps · <a href="mailto:hello@neural-breach.com">hello@neural-breach.com</a> · <a href="https://x.com/neural_breach" target="_blank" rel="noopener">@neural_breach on X</a> · <a href="https://github.com/moriluz/nb-probe" target="_blank" rel="noopener">nb-probe on GitHub</a></footer>
 </div>
+<script src="https://gumroad.com/js/gumroad.js"></script>
 </body>
 </html>
